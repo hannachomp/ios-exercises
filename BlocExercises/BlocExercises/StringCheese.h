@@ -28,7 +28,7 @@
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName;
 
 /**
- Removes "cheese" from the end of a string about cheese and only returns 
+ Removes "cheese" from the end of a string about cheese and only returns
  the name of the cheese.
  
  Example usage:
@@ -53,10 +53,10 @@
  @code
  NSString *phrase = [cheese numberOfCheesesStringWithCheeseCount:4];
  // phrase is "4 cheeses"
-
+ 
  NSString *phrase2 = [cheese numberOfCheesesStringWithCheeseCount:1];
  // phrase2 is "1 cheese"
-@endcode
+ @endcode
  
  @param cheeseCount
  The number of cheeses.
