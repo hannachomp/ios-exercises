@@ -15,6 +15,8 @@
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
+<<<<<<< HEAD
+<<<<<<< HEAD
    
     NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
     
@@ -26,6 +28,21 @@
     else {
         return cheeseName;
     }
+=======
+=======
+>>>>>>> upstream/master
+    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
+        /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
+    } else {
+        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
+    }
+
+    /*
+     (You will learn more about if/else statements in a later checkpoint.)
+     */
+
+    return nil;
+>>>>>>> upstream/master
 }
 
 
@@ -38,6 +55,15 @@
        return [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
     }
     
+<<<<<<< HEAD
     }
+=======
+    /*
+     (You will learn more about if/else statements in a later checkpoint.)
+     */
+    
+    return nil;
+}
+>>>>>>> upstream/master
 
 @end
