@@ -17,6 +17,7 @@
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    
     NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
     
@@ -31,6 +32,8 @@
 =======
 =======
 >>>>>>> upstream/master
+=======
+>>>>>>> Bloc/master
     if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
         /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
     } else {
