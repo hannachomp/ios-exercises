@@ -15,58 +15,34 @@
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-   
-    NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
+        
+        NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+        NSString *noCheeseName = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+        
+        return noCheeseName;
+    }
     
-    if (cheeseRange.location != NSNotFound){
-    NSString *nocheeseName = [cheeseName stringByReplacingCharactersInRange: cheeseRange withString:@""];
-    return nocheeseName;
+    if ([[cheeseName lowercaseString] hasSuffix:@" Cheese"]) {
+        
+        NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+        NSString *noCheeseName = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+        return noCheeseName;
+        
+        
     }
     
     else {
         return cheeseName;
     }
-=======
-=======
->>>>>>> upstream/master
-=======
->>>>>>> Bloc/master
-    if ([[cheeseName lowercaseString] hasSuffix:@" cheese"]) {
-        /* WORK HERE, ASSUMING `cheeseName` ENDS WITH " cheese" */
-    } else {
-        /* WORK HERE, ASSUMING `cheeseName` DOES NOT END WITH " cheese" */
-    }
-
-    /*
-     (You will learn more about if/else statements in a later checkpoint.)
-     */
-
-    return nil;
->>>>>>> upstream/master
 }
-
-
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
     if (cheeseCount == 1) {
         return [NSString stringWithFormat:@"%ld cheese", cheeseCount];
-        
     } else {
-       return [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
+        return [NSString stringWithFormat:@"%ld cheeses", cheeseCount];
     }
-    
-<<<<<<< HEAD
-    }
-=======
-    /*
-     (You will learn more about if/else statements in a later checkpoint.)
-     */
-    
-    return nil;
 }
->>>>>>> upstream/master
 
 @end
